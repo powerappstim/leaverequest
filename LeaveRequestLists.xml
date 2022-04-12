@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.9.1.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-461E459FED774BE69DB0B035EA06910B">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-461E459FED774BE69DB0B035EA06910B" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='6aaec8ab-0f6f-4bcf-98ac-83348ef8ddb4'&amp;hash=637789811640790073" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" MembersCanShare="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
+      <pnp:SiteSettings AllowDesigner="true" AllowCreateDeclarativeWorkflow="true" AllowSaveDeclarativeWorkflowAsTemplate="true" AllowSavePublishDeclarativeWorkflow="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="13" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry Key="UseFastCloneFromSiteMaster" Value="TRUE" Overwrite="false" />
+      </pnp:PropertyBagEntries>
+
+      <pnp:Lists>
+        <pnp:ListInstance Title="Balance" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Balance" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Balance/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Balance/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Balance/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8AD41C96-7088-4A9B-8E25-3BF7A306A6EA}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Balance/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="EmployeeName" />
+                <FieldRef Name="Year" />
+                <FieldRef Name="Vacation" />
+                <FieldRef Name="VacationUsed" />
+                <FieldRef Name="Sick" />
+                <FieldRef Name="SickUsed" />
+                <FieldRef Name="Floating" />
+                <FieldRef Name="FloatingUsed" />
+                <FieldRef Name="JuryDuty" />
+                <FieldRef Name="JuryDutyUsed" />
+                <FieldRef Name="Bereavement" />
+                <FieldRef Name="BereavementUsed" />
+                <FieldRef Name="BalanceID" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="EmployeeName" Required="FALSE" ID="{e9e5247b-bd78-4596-99a8-834ec8a92067}" SourceID="{{listid:Balance}}" StaticName="EmployeeName" Name="EmployeeName" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Year" Required="FALSE" ID="{fc358535-f1e6-42b4-bc0c-2b8b9550236b}" SourceID="{{listid:Balance}}" StaticName="Year" Name="Year" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Vacation" Required="FALSE" Percentage="FALSE" ID="{4ffbfe85-403d-4c7d-9f70-dbd6322f2f0f}" SourceID="{{listid:Balance}}" StaticName="Vacation" Name="Vacation" ColName="float1" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="VacationUsed" Required="FALSE" Percentage="FALSE" ID="{efd70da4-c8d8-430d-adb7-da3e330043f6}" SourceID="{{listid:Balance}}" StaticName="VacationUsed" Name="VacationUsed" ColName="float2" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Sick" Required="FALSE" Percentage="FALSE" ID="{10547c0d-c150-4c5e-aa9d-cd581e320e48}" SourceID="{{listid:Balance}}" StaticName="Sick" Name="Sick" ColName="float3" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="SickUsed" Required="FALSE" Percentage="FALSE" ID="{423cf8fb-e3b6-489a-8383-1cf3a115fe32}" SourceID="{{listid:Balance}}" StaticName="SickUsed" Name="SickUsed" ColName="float4" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Floating" Required="FALSE" Percentage="FALSE" ID="{a73ce20c-e699-41b9-94ef-fc286a4923cc}" SourceID="{{listid:Balance}}" StaticName="Floating" Name="Floating" ColName="float5" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="FloatingUsed" Required="FALSE" Percentage="FALSE" ID="{afd2e0ce-fe3c-4ca3-aa44-c61e1dc04708}" SourceID="{{listid:Balance}}" StaticName="FloatingUsed" Name="FloatingUsed" ColName="float6" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="JuryDuty" Required="FALSE" Percentage="FALSE" ID="{dd53c65d-ce54-49f0-b8a8-542b3524f4b8}" SourceID="{{listid:Balance}}" StaticName="JuryDuty" Name="JuryDuty" ColName="float7" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="JuryDutyUsed" Required="FALSE" Percentage="FALSE" ID="{334957d7-68bd-4f3e-8b65-f589a4d23af1}" SourceID="{{listid:Balance}}" StaticName="JuryDutyUsed" Name="JuryDutyUsed" ColName="float8" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Bereavement" Required="FALSE" Percentage="FALSE" ID="{182168e6-b910-4616-b051-cc1570af6aca}" SourceID="{{listid:Balance}}" StaticName="Bereavement" Name="Bereavement" ColName="float9" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="BereavementUsed" Required="FALSE" Percentage="FALSE" ID="{5576389b-3e7a-4158-a2e9-21d943c6f227}" SourceID="{{listid:Balance}}" StaticName="BereavementUsed" Name="BereavementUsed" ColName="float10" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="BalanceID" Required="FALSE" ID="{df77c791-64ca-49b1-96f9-4a3e4a5602c4}" SourceID="{{listid:Balance}}" StaticName="BalanceID" Name="BalanceID" ColName="nvarchar6" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Documents" Description="" DocumentTemplate="{site}/Shared Documents/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="Shared Documents" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" ListExperience="NewExperience" DefaultDisplayFormUrl="{site}/Shared Documents/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Shared Documents/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Shared Documents/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{90387A25-4B93-4ED0-A51B-1790226E1A1D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Form Templates" Description="This library contains administrator-approved form templates that were activated to this site collection." DocumentTemplate="" TemplateType="101" Url="FormServerTemplates" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/FormServerTemplates/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/FormServerTemplates/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/FormServerTemplates/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x010100F8EF98760CBA4A94994F13BA881038FA" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{6743FAB8-7F8E-466F-B90E-8679CAADBEE3}" MobileView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/FormServerTemplates/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{FE90B3E6-AAE4-4EAE-BC54-74FEBD26F1DD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Forms" Url="{site}/FormServerTemplates/Forms/All Forms.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="FormCategory" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="FormName" />
+                </OrderBy>
+                <Where>
+                  <Neq>
+                    <FieldRef Name="ShowInCatalog" />
+                    <Value Type="Boolean">0</Value>
+                  </Neq>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="FormName" />
+                <FieldRef Name="FormDescription" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+            <pnp:FieldRef ID="66b691cf-07a3-4ca6-ac6d-27fa969c8569" Name="FormName" DisplayName="Form Name" />
+            <pnp:FieldRef ID="65572d4d-445a-43f1-9c77-3358222a2c93" Name="FormCategory" DisplayName="Form Category" />
+            <pnp:FieldRef ID="94ad6f7c-09a1-42ca-974f-d24e080160c2" Name="FormVersion" DisplayName="Form Version" />
+            <pnp:FieldRef ID="1a03fa74-8c63-40cc-bd06-73b580bd8744" Name="FormId" DisplayName="Form ID" />
+            <pnp:FieldRef ID="96c27c9d-33f5-4f8e-893e-684014bc7090" Name="FormLocale" DisplayName="Form Locale" />
+            <pnp:FieldRef ID="1fff255c-6c88-4a76-957b-ae24bf07b78c" Name="FormDescription" DisplayName="Form Description" />
+            <pnp:FieldRef ID="4ef69ca4-4179-4d27-9e6c-f9544d45dfdc" Name="ShowInCatalog" DisplayName="Show in Catalog" />
+            <pnp:FieldRef ID="1a03fa74-8c63-40cc-bd06-73b580bd8743" Name="LinkTemplateName" DisplayName="Form Name" />
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Holidays" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Holidays" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Holidays/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Holidays/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Holidays/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{FEBBCE66-5939-4076-82E8-2757E4695A8D}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Holidays/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="StartDate" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="DateTime" DisplayName="StartDate" Required="FALSE" Format="DateOnly" ID="{ab398cda-c465-4730-9a51-351a3d3ec258}" SourceID="{{listid:Holidays}}" StaticName="StartDate" Name="StartDate" ColName="datetime1" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Leave" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Leave" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Leave/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Leave/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Leave/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8A6EC12E-B8F1-4C6F-91A3-E123C09F4CC8}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Leave/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Detail" />
+                <FieldRef Name="StartDate" />
+                <FieldRef Name="EndDate" />
+                <FieldRef Name="LeaveType" />
+                <FieldRef Name="Requester" />
+                <FieldRef Name="Approver" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="LeaveID" />
+                <FieldRef Name="StartDatePartialType" />
+                <FieldRef Name="EndDatePartialType" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Detail" Required="FALSE" ID="{a9155c16-c7cc-4360-b44a-1b89f244c230}" SourceID="{{listid:Leave}}" StaticName="Detail" Name="Detail" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="StartDate" Required="FALSE" Format="DateOnly" ID="{f9d9fd9f-2958-4643-98f2-afc7a04c3894}" SourceID="{{listid:Leave}}" StaticName="StartDate" Name="StartDate" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="StartDatePartialType" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{fd6c03cb-3bc2-408e-a782-6abce68d944d}" SourceID="{{listid:Leave}}" StaticName="StartDatePartialType" Name="StartDatePartialType" ColName="float1" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="EndDate" Required="FALSE" Format="DateOnly" ID="{dc04afcc-4639-4047-8141-d4f1bec85e61}" SourceID="{{listid:Leave}}" StaticName="EndDate" Name="EndDate" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="EndDatePartialType" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{b9bb2ccf-9c72-4916-90bc-a23de79b0c92}" SourceID="{{listid:Leave}}" StaticName="EndDatePartialType" Name="EndDatePartialType" ColName="float2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="LeaveType" Required="FALSE" ID="{51ad609f-0f07-4d9b-9355-67d7ff4200d3}" SourceID="{{listid:Leave}}" StaticName="LeaveType" Name="LeaveType" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Requester" Required="FALSE" ID="{b81eea3c-290c-41bc-8d6d-cef5a58c9255}" SourceID="{{listid:Leave}}" StaticName="Requester" Name="Requester" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Approver" Required="FALSE" ID="{58bdd150-d687-4657-9535-5bb44e03d420}" SourceID="{{listid:Leave}}" StaticName="Approver" Name="Approver" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Status" Required="FALSE" ID="{6f864f47-a359-45e9-b099-2d35bb986aca}" SourceID="{{listid:Leave}}" StaticName="Status" Name="Status" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="LeaveID" Required="FALSE" ID="{7e3fc66b-db7b-4552-a747-710f834445aa}" SourceID="{{listid:Leave}}" StaticName="LeaveID" Name="LeaveID" ColName="nvarchar9" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." DocumentTemplate="{site}/SiteAssets/Forms/template.doc" TemplateType="101" Url="SiteAssets" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/SiteAssets/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SiteAssets/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SiteAssets/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="IsAttachmentLibrary" Value="1" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{DDFD2138-7448-4ED1-B93A-DA0D730E1CEF}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/SiteAssets/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x010108" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010901" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{6B5303EE-5AEB-406F-9FCA-4DDF039B32DF}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Author" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="Modified" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{D13596AB-714F-44A3-B31E-E2DC806B078D}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="5" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Editor" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{311B1871-EAF3-4F86-A44C-DF71F2FCA410}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{3F615BA4-7CF0-4185-BDA7-E777C6998B7C}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="3" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Author" />
+                    <Value Type="Integer">
+                      <UserID />
+                    </Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{40995D61-CA88-49CF-A3BD-9DA6F9F05DA2}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="2" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c33527b4-d920-4587-b791-45024d00068a" Name="WikiField" DisplayName="Wiki Content" />
+            <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" DisplayName="Authoring Canvas Content" />
+            <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" DisplayName="Banner Image URL" />
+            <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" DisplayName="Description" />
+            <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" DisplayName="Promoted State" />
+            <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" DisplayName="First Published Date" />
+            <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" DisplayName="Page Layout Content" />
+            <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" DisplayName="Author Byline" />
+            <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" DisplayName="Topic header" />
+            <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" DisplayName="Site Page Flags" />
+            <pnp:FieldRef ID="9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2" Name="_SPCallToAction" DisplayName="Call To Action" />
+            <pnp:FieldRef ID="0e7b982f-698a-4d0c-aacb-f16906f66d30" Name="_OriginalSourceUrl" DisplayName="Original Source Url" />
+            <pnp:FieldRef ID="36193413-dd5c-4096-8c1e-1b40098b9ba3" Name="_OriginalSourceSiteId" DisplayName="Original Source Site ID" />
+            <pnp:FieldRef ID="3477a5bc-c605-4b2e-a7c1-8db8f13c017e" Name="_OriginalSourceWebId" DisplayName="Original Source Web ID" />
+            <pnp:FieldRef ID="139da674-dbf6-439f-98e0-4eb05fa9a669" Name="_OriginalSourceListId" DisplayName="Original Source List ID" />
+            <pnp:FieldRef ID="91e86a43-75f2-426f-80da-35edfb47d55d" Name="_OriginalSourceItemId" DisplayName="Original Source Item ID" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Style Library" Description="Use the style library to store style sheets, such as CSS or XSL files. The style sheets in this gallery can be used by this site or any of its subsites." DocumentTemplate="" TemplateType="101" Url="Style Library" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Style Library/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Style Library/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Style Library/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{E09195B7-388E-4598-8D90-CB0511F527CB}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Style Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+      <pnp:Features>
+        <pnp:WebFeatures>
+          <pnp:Feature ID="780ac353-eaf8-4ac2-8c47-536d93c03fd6" />
+        </pnp:WebFeatures>
+      </pnp:Features>
+      <pnp:Header Layout="Compact" ShowSiteTitle="false" ShowSiteNavigation="false" />
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
