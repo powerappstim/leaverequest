@@ -102,7 +102,7 @@ To set up the app, you can import the [package file](LeaveRequestPackage.zip) or
 
 Next, modify the data sources in the app to point to the SharePoint lists that were created in the pre-requisite step. You can then save and publish the app.
 
-## How the app looks at one time
+## How the app looks at run time
 When a user makes a request leave, there is an option to select a partial start date through a drop down. The available options are "All day", "First half", and "Second half". 
 
 ![](docs/pic1.png?raw=true)
